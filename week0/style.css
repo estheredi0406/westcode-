@@ -1,0 +1,39 @@
+/* Universal box-sizing reset — sets all elements to include
+   padding and border inside their width/height calculation */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body — the root element of your visible page */
+body {
+  background-color: #f5f0e8; /* background-color property */
+  font-family: sans-serif;   /* font-family property */
+  padding: 40px;             /* inner spacing — padding property */
+}
+
+/* Type selector — targets all h1 elements */
+h1 {
+  color: #0a0a0a;
+  font-size: 28px;           /* font-size property */
+  margin-bottom: 24px;       /* outer spacing below element */
+}
+
+/* Class selector — targets elements with class="card" */
+.card {
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0; /* border shorthand: width style color */
+  border-radius: 8px;        /* rounds corners */
+  padding: 20px;
+  width: 200px;
+  margin-bottom: 16px;       /* space between cards */
+}
+
+/* Class selector — targets elements with class="price" */
+.price {
+  color: #1a7a4a;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 8px;
+}
