@@ -9,8 +9,34 @@ const farmers = [
 
 
 
-/* Exercise 6 — method chaining ❌ NOT DONE
+
+ /*### Exercise 7 — while loop -
 ```
+A farmer has 100kg of Yam in stock.
+Each sale removes 15kg.
+Use a while loop to print remaining stock 
+after each sale until stock runs out:
+
+"Stock remaining: 100kg"
+"Stock remaining: 85kg"
+...
+"Out of stock"*/
+
+let stock = 100
+const saleAmount = 15
+
+while (stock>0) {
+
+    console.log(`Stock remaining: ${stock}kg`)
+    stock -= saleAmount
+}
+
+console.log("Out of stock")
+
+
+
+
+/* Exercise 6 — method chaining 
 In ONE chain — filter farmers that are inStock,
 then map them to this string:
 "[name] — [crop] — [price] GHS"
@@ -20,6 +46,10 @@ Print it
 ```
  */
 
+
+
+
+
 const availableListings = farmers
 .filter(farmer => farmer.inStock)
 .map(farmer => `${farmer.name} - ${farmer.crop} - ${farmer.priceGHS} GHS` )
@@ -27,7 +57,7 @@ const availableListings = farmers
 
 
 
-/*### Exercise 5 — find ❌ NOT DONE
+/*### Exercise 5 — find E
 ```
 Task 1: Find the farmer who grows "Tomatoes"
         Store in const tomatoFarmer
@@ -51,7 +81,7 @@ const tomatoFarmer = farmers.find(farmer => farmer.crop === 'Tomatoes')
 
 
 
-/*Exercise 4 — filter ❌ NOT DONE
+/*Exercise 4 — filter 
 ```
 Task 1: Create availableFarmers — only farmers 
         where inStock is true
@@ -69,7 +99,7 @@ console.log(availableFarmers)
 const ashantiFarmers = farmers.filter(farmer => farmer.region === "Ashanti" )
 
 
-/*### Exercise 3 — map ✅ DONE
+/*### Exercise 3 — map 
 ```
 Create a new array called listings where each 
 element is a string:
@@ -84,7 +114,7 @@ console.log(listings)
 
 
 
-/*### Exercise 2 — forEach ✅ DONE
+/*### Exercise 2 — forEach 
 ```
 Same output as Exercise 1 but using forEach
 
@@ -100,7 +130,7 @@ farmers.forEach(farmer => {
 })
 
 
-/* ### Exercise 1 — for loop ✅ DONE
+/* ### Exercise 1 — for loop 
 ```
 Print every farmer's name and crop:
 "Kofi Mensah grows Yam"
@@ -115,7 +145,7 @@ for(let i = 0; i < farmers.length; i++) {
 
 
 
-/*### Exercise 2 — forEach ✅ DONE
+/*### Exercise 2 — forEach 
 ```
 Same output as Exercise 1 but using forEach
 ```
