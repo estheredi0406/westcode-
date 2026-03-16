@@ -1,0 +1,152 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+
+body{
+    background-color: rgb(220, 220, 192);
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+/*Header */
+
+header h1{
+    font-size: 32px;
+    color: #0a0a0a;
+    margin-bottom: 4px;
+}
+
+header p{
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 32px;
+}
+
+#stats{
+display: flex;
+gap: 16px;
+margin-bottom: 24px;
+}
+
+#member-count,
+#total-amount {
+  background: white;
+  border: 0.5px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px 24px;
+  font-size: 14px;
+  color: #555;
+  font-weight: bold;
+}
+
+/* CONTROLS */
+#controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#search {
+  padding: 10px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 280px;
+  outline: none;
+}
+
+#search:focus {
+  border-color: #1a7a4a;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#btn-paid {
+  background: #1a7a4a;
+  color: white;
+}
+
+#btn-reset {
+  background: #e0e0e0;
+  color: #333;
+}
+
+/* CARDS GRID */
+#members-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* BASE CARD */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 220px;
+  border: 2px solid #e0e0e0;
+}
+
+.card h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #0a0a0a;
+}
+
+.card p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* PAID — green left border */
+.paid {
+  border-left: 4px solid #1a7a4a;
+}
+
+/* UNPAID — faded, orange left border */
+.unpaid {
+  border-left: 4px solid #d63b2f;
+  opacity: 0.6;
+}
+
+/* BADGE */
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.badge-paid {
+  background: #e1f5ee;
+  color: #0f6e56;
+}
+
+.badge-unpaid {
+  background: #faece7;
+  color: #993c1d;
+}
+
+/* RESPONSIVE — mobile first */
+@media (max-width: 600px) {
+  body { padding: 20px; }
+  .card { width: 100%; }
+  #search { width: 100%; }
+  #stats { flex-direction: column; }
+} 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUSU PAY</title>
+    <link rel="stylesheet" href="susu.css">
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to SuSu Pay</h1>
+        <p>Your digital savings group manager</p>
+    </header>
+
+    <main>
+         <!-- DYNAMIC — JS will fill these with numbers -->
+        <div id ='stats'>
+            <div id = 'totalMembers'></div>
+            <div id ='totalAmount'></div>
+        </div>
+
+ <!-- STATIC — controls never change structure -->
+        <div id="controls">
+            <input type="text" id="search" placeholder="Search member..."/>
+            <button id="btn-paid">Paid Only</button>
+            <button id="btn-reset">Reset</button>
+        </div>
+
+<!-- DYNAMIC — JS generates all cards here -->
+        <div id="members-container">
+
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+    
+
+
+    <script src="susu.js"></script>
+</body>
+</html>
