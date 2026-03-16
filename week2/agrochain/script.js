@@ -44,22 +44,78 @@ Open index.html with Live Server. You should see 5 cards on screen.*/
 
 const container = document.querySelector('#listings-container')
 
-farmers.forEach(farmer => {
+// farmers.forEach(farmer => {
 
 
-    const card = document.createElement('div')
+//     const card = document.createElement('div')
 
-    card.classList.add('card') 
-    card.classList.add(farmer.inStock? "in-stock" : "out-of-stock")
+//     card.classList.add('card') 
+//     card.classList.add(farmer.inStock? "in-stock" : "out-of-stock")
 
 
 
+//     card.innerHTML = `
+//     <h2> ${farmer.name}</h2>
+//     <p> ${farmer.crop}</p>
+//     <P> ${farmer.priceGHS} GHS</p>
+//     <P> ${farmer.region}</p>
+//     <p>${farmer.inStock ? "In Stock" : "Out of Stock"}</p> 
+//     `
+//     container.appendChild(card)
+// })
+
+
+
+function renderFarmers(farmersToRender) {
+  container.innerHTML = ''
+  farmersToRender.forEach(farmer=> {
+    const card = document.createElement ('div')
+    card.classList.add('card')
+    card.classList.add(farmer.inStock ? 'in-stock' : 'out-of-stock')
     card.innerHTML = `
-    <h2> ${farmer.name}</h2>
-    <p> ${farmer.crop}</p>
-    <P> ${farmer.priceGHS} GHS</p>
-    <P> ${farmer.region}</p>
-    <p>${farmer.inStock ? "In Stock" : "Out of Stock"}</p> 
+    <h2>${farmer.name}</h2>
+      <p>${farmer.crop}</p>
+      <p>${farmer.priceGHS} GHS</p>
+      <p>${farmer.region}</p>
+      <p>${farmer.inStock ? "In Stock" : "Out of Stock"}</p>
     `
     container.appendChild(card)
-})
+    
+
+  })
+}
+
+renderFarmers(farmers)
+
+const searchInput = document.querySelector('#search')
+
+searchInput.addEventListener('input', () => {
+  const searchTerm = searchInput.value.toLowerCase()
+
+  const filtered = farmers.filter(farmer => 
+    farmer.name.toLowerCase().includes(searchTerm) ||
+    farmer.crop.toLowerCase().includes(searchTerm) 
+  ) 
+
+  renderFarmers(filtered)
+
+  })
+
+
+  const btnAvailable = document.querySelector('#btn-available')
+
+  btnAvailable.addEventListener('click', () => {
+    const filteredFarmerss = farmers.filter(farmer => 
+      farmer.inStock === true 
+    )
+
+    renderFarmers(filteredFarmerss)
+
+  })
+
+
+  const btnReset = document.querySelector('#btn-reset')
+
+  btnReset.addEventListener('click', () => {
+    renderFarmers(farmers)
+  })
