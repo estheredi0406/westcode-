@@ -4,7 +4,7 @@
 - Variable declarations — const, let, block scope
 - Primitive data types — String, Number, Boolean, Null, Undefined
 - Arrays — iteration, mutation methods, index access
-- Objects — key-value pairs, dot notation, bracket notation
+- Objects — key-value pairs, dot notation, bracket notation lkdjowlks
 - Functions — parameters, return values, default parameters, scope
 - Array methods — forEach, map, filter, find, method chaining
 - Loops — for loop, while loop
